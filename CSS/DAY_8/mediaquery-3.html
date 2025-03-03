@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+    }
+
+    /* Logo */
+    .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* Menu Items */
+    .menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li {
+      margin-left: 20px;
+    }
+
+    .menu li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* Hamburger Icon (Hidden by Default) */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger .line {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+
+    /* Hide Checkbox */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* Media Query for Mobile Screens */
+    @media (max-width: 768px) {
+      /* Hide Menu Items */
+      .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+        position: absolute;
+        top: 50px; /* Adjust based on navbar height */
+        left: 0;
+      }
+
+      /* Show Menu When Checkbox is Checked */
+      #menu-toggle:checked ~ .menu {
+        display: flex;
+      }
+
+      .menu li {
+        margin: 10px;
+        text-align: start;
+      }
+
+      /* Show Hamburger Icon */
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <!-- Logo -->
+    <a href="#" class="logo">MyLogo</a>
+
+    <!-- Hidden Checkbox -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Hamburger Icon -->
+    <label for="menu-toggle" class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+
+    <!-- Menu -->
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID - RESPONSIVENESS</title>
+    <style>
+        .container > div {
+            background-color: blue;
+            padding: 30px;
+        }
+        .container{
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        @media screen and (max-width:768px){
+            .container{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media screen and (max-width:375px){
+            .container{
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+    </div>
+</body>
+</html>

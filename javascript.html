@@ -13,22 +13,80 @@
 
         // FOREACH 
 
-        // it returns data only not return array
+        // var num = [1, 2, 3, 4, 5];
+        // num.forEach((value, index, array) => {
+        //     // console.log(value);
+        //     // console.log(index);
+        //     console.log(array);
+        // })
 
-        let nums = [1, 2, 3, 4];
+        // Example 1 
 
-        nums.forEach((num, index) => {
-            console.log(index * 2);
-        });
+        // var num = [1, 2, 3, 4, 5];
+        // num.forEach((a) => {
+        //     console.log(a * 2);
+        // })
 
+        // Example 2 
+
+        // var marks = [1, 2, 3, 4];
+        // marks.forEach((value, index, array) => {
+        //     array[index] = value * 2
+        // })
+        // console.log(marks);
+
+        // Example 3 
+
+        // var marks = [
+        //     {
+        //         name : 'Abinaya',
+        //         mark : 75
+        //     },
+        //     {
+        //         name : 'Anu',
+        //         mark : 45
+        //     },
+        //     {
+        //         name : 'Hari',
+        //         mark : 74
+        //     },
+        //     {
+        //         name : 'Siva',
+        //         mark : 30
+        //     }
+        // ]
+
+        // marks.forEach((marks) => {
+        //     marks.grade = marks.mark >= 50 ? 'PASS' : 'FAIL'
+        // })
+        
+        // console.log(marks);
+        
         // MAP
 
-        // it returns array 
-
-        // var numbers = [1, 2, 3, 4];
-        // numbers.map((num) => {
-        //     console.log(num * 2);
+        // var num = [1, 2, 3, 4, 5];
+        // num.map((value, index, array) => {
+        //     console.log(value);
+        //     // console.log(index);
+        //     // console.log(array);
         // })
+
+        // var num = [1, 2, 3, 4, 5];
+        // num.map((a) => {
+        //     console.log(a * 2);
+        // })
+
+        // REDUCE
+
+        // array.reduce((initial value, current value, index, array) => {
+        // code
+        // })
+
+        var num = [1, 2, 3, 4, 5];
+        num.reduce((a, b, c, d) => {
+            console.log(a);
+            return a + b
+        })
 
     </script>
 

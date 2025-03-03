@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: black;
+            color: white;
+            padding: 30px;
+            border: 2px solid black;
+        }
+        .checkbox{
+            display: none;
+        }
+        .checkbox-label{
+            padding: 15px 30px;
+            background-color: blue;
+            color: white;
+            border-radius: 20px;
+            margin: 20px 0;
+            display: inline-block;
+            cursor: pointer;
+        }
+        #toggle:checked ~ .container{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle" class="checkbox">
+
+    <label for="toggle" class="checkbox-label">Toggle Theme</label>
+
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, facere.</p>
+        <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, corrupti!</h1>
+    </div>
+</body>
+</html>
