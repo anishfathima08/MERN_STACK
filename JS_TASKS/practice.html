@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- document.write -> types, ElementById, ElementsByClassName, ElementsByTagName, querySelectorAll, document.images.length, document.links.length, document.anchors.length, document.title, document.forms.length, creating element using que sel, counter using timeout -->
+
+    <!-- Onload, Onchange, Onkeyup, Onmouseover, OnmouseOut, Onmousemove, Onmouseup, Onmousedown, Onclick, OndoubleClick, Onfocus, On blur -->
+</head>
+<body>
+    
+    <script>
+
+        //Document.write - Method 1
+    
+        // document.write("Hello Js");
+    
+        //Document.write - Method 2
+        
+        // document.write("<h1> Hello World </h1>");
+    
+        //document.write - Method 3
+    
+        // document.write("<p>Hello Js with <i> i tag </i> in p tag</p>");
+    
+    </script>
+
+    <!-- HTML elements by id -->
+    
+    <!-- <p id="demo"></p> -->
+
+    <script>
+
+    
+        // document.getElementById("demo").innerHTML="Hello World";
+
+         //HTML elements by Tag Name
+
+        // var p=document.getElementsByTagName("p");
+        // p[0].innerHTML="<b>Hello World</b>";
+        
+    </script>
+
+    <!-- HTML Elements by Class Name. -->
+
+    <!-- <p class="cls">Hello World!</p>
+
+    <p class="cls">This example for <b>getElementsByClassName</b> method.</p>
+
+    <p id="demo"></p> -->
+
+    <script>
+
+    // const x = document.getElementsByClassName("cls");
+
+    // document.getElementById("demo").innerHTML = "DOM " + x[0].innerHTML; 
+
+    </script>
+
+    <!-- HTML Elements by Query Selector All -->
+
+    <!-- <p class="cls">Hello World!.</p>
+    <p class="cls">This example for <b>querySelectorAll</b> method.</p>
+    <p id="demo"></p> -->
+
+    <script>
+
+    // const x = document.querySelectorAll("p.cls");
+
+    // document.getElementById("demo").innerHTML =  "DOM " + x[0].innerHTML;
+
+    </script>
+
+    <!-- <button id="demo"></button> -->
+
+    <!-- <p class="cls">Hello World!.</p>
+    <p class="cls">This example demonstrates the <b>querySelectorAll</b> method.</p>
+    <p id="demo"></p> -->
+
+    <script>
+
+        // const x = document.querySelectorAll("p.cls"); //p = tag cls = class name
+        // document.getElementById("demo").innerHTML = "DOM " + x[0].innerHTML;
+
+    </script>
+
+    <!-- document images -->
+
+    <!-- <img src="JS ILIFE TASKS/22-07 TASKS/img/1.webp" alt="">
+    <img src="JS ILIFE TASKS/22-07 TASKS/img/2.webp" alt="">
+    <img src="JS ILIFE TASKS/22-07 TASKS/img/3.webp" alt="">
+    <img src="JS ILIFE TASKS/22-07 TASKS/img/4.webp" alt="">
+    <img src="JS ILIFE TASKS/22-07 TASKS/img/5.webp" alt="">
+
+    <p id="demo"></p> -->
+
+    <script>
+
+        // document.getElementById("demo").innerHTML = "Num of Imgs: " + document.images.length;
+
+    </script>
+
+    <!-- Document.link -->
+
+    <!-- Link -->
+    <!-- <a href="">HTML</a><br>  -->
+
+    <!--Not a Link-->
+    <!-- <a name="11">HTML</a><br>  -->
+
+    <!--Link-->
+    <!-- <a href="" name="anis">HTML</a><br>  -->
+
+    <!-- <p id="demo"></p> -->
+    
+    <script>
+
+        // document.getElementById("demo").innerHTML = "Num of Links " + document.links.length;
+
+    </script>
+
+    <!-- Document.title -->
+
+    <!-- <p id="demo"></p> -->
+
+    <script>
+
+        // document.getElementById("demo").innerHTML = "Title - " + document.title;
+        
+    </script>
+
+    <!-- Document.Anchors -->
+
+    <!--Anchor Tag-->
+    <!-- <a name="11">HTML</a><br>  -->
+
+    <!--Not a Anchor Tag-->
+    <!-- <a href="#">HTML</a><br>  -->
+
+    <!--Not a Anchor Tag-->
+    <!-- <a>Hello JS</a> -->
+
+    <!-- <p id="demo"></p> -->
+    
+    <script>
+
+        // document.getElementById("demo").innerHTML = "Num of anchor tag " + document.anchors.length;
+
+    </script>
+
+    <!-- Document.forms.length -->
+
+    <!-- <form action="">
+        FirstName <input type="text">
+    </form>
+    <form action="">
+        SceondName <input type="text"><br>
+        Address <input type="text">
+    </form>
+
+    <p id="demo"></p> -->
+
+    <script>
+        // document.getElementById("demo").innerHTML="Num of forms " + document.forms.length;
+    </script> 
+
+    <!-- Creating Element in a div using querySelector -->
+
+    <!-- <div class="join"></div> -->
+
+    <script>
+
+        // var a = document.createElement("h1");
+        // a.innerHTML="Hello World";
+
+        // document.querySelector(".join").appendChild(a);
+
+    </script>
+
+    <!-- Counter using timeout -->
+
+    <!-- <button onclick="func()" id="btn">1</button> -->
+
+    <script>
+
+        // var a=Number(document.querySelector("#btn").innerHTML);
+        // function func(){
+        //     a=a+1;
+        //     document.querySelector("#btn").innerHTML=a;
+        // }
+        // setTimeout(func,5000);
+
+    </script>
+
+    <!-- <button onclick="date()">Time is ?</button> -->
+    <!-- <p id="demo"></p> -->
+
+    <script>
+
+        // function date(){
+        //     document.getElementById("demo").innerHTML=new Date();
+        // }
+
+    </script>
+
+    <!-- onload Event -->
+
+    <!-- <h1 id="demo"></h1> -->
+
+    <script>
+
+        // function checkCookies(){
+        //     var text = "";
+        //     if(navigator.cookieEnabled == true){
+        //         text = "Cookies are enabled";  //*navigator.cookieEnabled
+        //     }
+        //     else{
+        //         text = "Cookies are not enabled";
+        //     }
+        //     document.getElementById("demo").innerHTML=text;
+        // }
+        // checkCookies();
+
+    </script>
+
+    <!-- onchange Event -->
+
+    <!-- <h1>Onchange Event</h1> 
+
+    <select id="sel" onchange="Alert()">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+    </select><br> -->
+
+    <script>
+
+        // function Alert() {
+        //     var selectElement = document.getElementById('sel');
+        //     alert("changed into "+ selectElement.value);
+        // }
+
+    </script>
+
+    <!-- onkeyup Event -->
+
+
+    <!-- Name : <input type="text" id="name" onkeyup="upperCase()">
+    Name : <input type="text" id="name1" onchange="upperCase1()">
+    Name : <input type="text" id="name2" onchange="upperCase2()"> -->
+
+    <script>
+
+        // function upperCase(){
+        //     const a = document.getElementById("name");
+        //     if((a.value).length==0){
+        //         alert("Please Fill");
+        //     }
+        // }
+
+        // function upperCase1(){
+        //     var value= document.querySelector("#name1").value;
+        //     document.querySelector("#name1").value=value.toUpperCase();
+        // }
+
+    </script>
+
+    <!-- onmouseout, onmouseover -->
+
+    <!-- <marquee behavior="" direction="" onmouseover="stop()" onmouseout="start()">Hello World</marquee> -->
+    
+    <!-- onmouseout -->
+
+    <!-- <h2 onmouseout="changeText(this)">Mouseout on the text</h2> -->
+
+    <script>
+
+        // function changeText(id){
+        //     id.innerHTML = "Oops!";
+        // }
+
+    </script>
+
+            <!-- Onmouseover - when mouse Hover
+            onmouseout - when mouse out -->
+
+    <!-- <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="color: white; background-color: blue; width: 150px; height: 20px; padding: 40px; text-align: center;">Mouse Over Me</div> -->
+
+            <!-- Onmousemove - when mouse Hover
+            onmouseout - when mouse out -->
+
+    <!-- <div onmousemove="mOver(this)" onmouseout="mOut(this)" style="color: white; background-color: blue; width: 150px; height: 20px; padding: 40px; text-align: center;">Mouse Over Me</div> -->
+
+            <!-- Onmouseup - After Click
+            Onmousedown - When Holding  -->
+
+    <!-- <div onmouseup="mOver(this)" onmousedown="mOut(this)" style="color: white; background-color: blue; width: 150px; height: 20px; padding: 40px; text-align: center;">Mouse Over Me</div> -->
+
+            <!-- Onclick - After Single Click
+            Ondblclick - After Double Click  -->
+
+    <!-- <div onclick="mOver(this)" ondblclick="mOut(this)" style="color: white; background-color: blue; width: 150px; height: 20px; padding: 40px; text-align: center;">Mouse Over Me</div> -->
+
+    <script>
+
+        // function mOver(obj){
+        //     obj.innerHTML = "Thank you";
+        // }
+
+        // function mOut(obj){
+        //     obj.innerHTML = "Mouse Over Me";
+        // }
+
+    </script>
+
+    <!-- Onfocus & Onblur -->
+
+    <!-- Name : <input type="text" onfocus="myFunction(this)" onblur="myFunction1(this)"><br>
+    Name : <input type="text" onfocus="myFunction(this)" onblur="myFunction1(this)"><br>
+    Name : <input type="text" onfocus="myFunction(this)" onblur="myFunction1(this)"><br> -->
+
+    <script>
+
+        // function myFunction(a){
+        //     a.style.background = "red";
+        // }
+        // function myFunction1(a){
+        //     a.style.background = "violet";
+        // }
+        
+    </script>
+
+</body>
+</html>

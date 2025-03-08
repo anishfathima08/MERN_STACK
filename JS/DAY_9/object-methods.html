@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- OBJECT, FUNCTION, THIS, SET, GET, HAS, DELETE, CLEAR, SIZE -->
+
+    <script>
+
+        // OBJECT
+
+            // var obj = {
+            //     name : 'Abinaya',
+            //     address : 'Trichy'
+            // }
+            // console.log(obj);
+            // console.log(obj.name);
+
+        // NESTED OBJECT
+
+            // var obj = {
+            //     name : 'Abinaya',
+            //     address : {
+            //         door :'23',
+            //         city : 'trichy '
+            //     }
+            // }
+            // console.log(obj.address.door);
+            // console.log(obj.address.city);
+
+        // FUNCTION INSIDE OBJECT
+
+            // var obj = {
+            //     name : 'Abinaya',
+            //     welcome : function(){
+            //         return 'Hello'
+            //     }
+            // }
+            // console.log(obj.welcome());
+
+        // THIS KEYWORD 
+
+        // EXAMPLE 1
+
+            // var obj = {
+            //     name : 'Abinaya',
+            //     age : 20,
+            //     funciton_name : function(){
+            //         console.log('Hello')
+            //     }
+            // }
+
+            // obj.funciton_name();
+
+            // var obj = {
+            //     name : 'Abinaya',
+            //     func : function(){
+            //         return `Hello ${obj.name}`
+            //     }
+            // }
+            // console.log(obj.func());
+
+            // var obj = {
+            //     name : 'Abinaya',
+            //     age : 30,
+            //     data : function(){
+            //         return `Hello ${this.name}`
+            //     }
+            // }
+            // console.log(obj.data());
+
+        // EXAMPLE 2
+
+        // var obj = {
+        //     details : {
+        //         name : 'Abinaya'
+        //     },
+        //     func : function(){
+        //         return `Hello ${this.details.name}`
+        //     }
+        // }
+
+        // console.log(obj.func());
+
+        // SET
+
+            // var obj = new Map();
+            // obj.set("name", "John");
+            // obj.set("age", 25);
+            // obj.set("address", "Trichy")
+            // console.log(obj); 
+
+        // GET
+
+            // console.log(obj.get("name"));
+            // console.log(obj.get("age"));
+            // console.log(obj.get("address"));
+
+        // DELETE
+
+            // var obj = new Map();
+            // obj.set('name', 'Abinaya');
+            // obj.set('age', 20)
+
+            // console.log(obj);
+            // console.log(obj.delete('name'));
+            // console.log(obj);
+
+        // CLEAR 
+
+            // var obj = new Map();
+            // obj.set('name','Abinaya');
+            // obj.set('age', 20);
+
+            // console.log(obj);
+            // obj.clear();
+            // console.log(obj);
+
+        // HAS METHOD
+
+            // var obj = new Map();
+            // obj.set('name', 'Abinaya')
+            // obj.set('age', 30)
+            
+            // console.log(obj); 
+            // console.log(obj.has('name')); //true
+            // console.log(obj.has('address')); //false
+        
+    </script>
+</body>
+</html>

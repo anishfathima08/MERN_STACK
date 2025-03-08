@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <body onload='alert("Page Loaded")'> -->
+
+    <!-- EVENTS - ONCLICK, ONDBLCLICK, ONSUBMIT, ONMOUSEDOWN, ONMOUSEUP, ONMOUSEOVER, ONMOUSEOUT, ONMOUSELEAVE, ONCHANGE, ONKEYUP, ONKEYPRESS, ONFOCUS, ONBLUR, WINDOW RESIZE, ONLOAD -->
+
+    <!-- ONCLICK -->
+
+        <!-- <button onclick="clickfun()">Click Here</button> -->
+
+        <!-- <h1 onclick="clickfun()">Hello Click Here</h1> -->
+
+        <script>
+
+            // function clickfun(){
+            //     alert('Hello onClick Event')
+            // }
+
+        </script>
+
+    <!-- ONDBLCLICK -->
+
+        <!-- <button ondblclick="dblclickfun()">Double Click Here</button> -->
+
+        <script>
+
+            // function dblclickfun(){
+            //     alert('Double clicked')
+            // }
+
+        </script>
+
+    <!-- ONSUBMIT -->
+
+        <!-- <form onsubmit="submitFun(event)">
+            <input type="text" required>
+            <input type="submit" value="Submit">
+        </form> -->
+
+        <script>
+
+            // const submitFun = (event) => {
+            //     event.preventDefault();
+            //     console.log('Form Submitted');
+            // }
+
+        </script>
+
+    <!-- ONMOUSEDOWN & ONMOUSEUP -->
+
+        <!-- <button onmousedown="mouseDown()" onmouseup="mouseUp()">Click</button> -->
+        <!-- <p></p> -->
+
+        <script>
+
+            // const mouseDown = () => {
+            //     document.getElementsByTagName('p')[0].innerHTML = 'Button Pressed'
+            // }
+
+            // const mouseUp = () => {
+            //     document.getElementsByTagName('p')[0].innerHTML = 'Button Released'
+            // }
+
+        </script>
+
+    <!-- ONMOUSEOVER -->
+
+        <!-- <p onmouseover="mouseOverFun()">Hello</p> -->
+
+        <script>
+
+            // function mouseOverFun(){
+
+            //     document.getElementsByTagName('p')[0].style.color = 'red'
+            //     document.getElementsByTagName('p')[0].style.backgroundColor = 'black'
+            // }
+
+        </script>
+
+    <!-- ONMOUSEOUT -->
+
+        <!-- <p onmouseout="mouseOutFun()">Hello</p> -->
+
+        <script>
+
+            // function mouseOutFun(){
+
+            //     document.getElementsByTagName('p')[0].style.color = 'red';
+            //     document.getElementsByTagName('p')[0].style.backgroundColor = 'black'
+
+            // }
+
+        </script>
+
+    <!-- ONMOUSELEAVE -->
+
+        <!-- <p onmouseleave="mouseLeaveFun()">Hello</p> -->
+
+        <script>
+
+            // function mouseLeaveFun(){
+
+            //     document.getElementsByTagName('p')[0].style.color = 'red';
+            //     document.getElementsByTagName('p')[0].style.backgroundColor = 'black'
+
+            // }
+
+        </script>
+
+    <!-- ONMOUSEOVER & ONMOUSELEAVE -->
+
+        <!-- <p onmouseover="mouseOverFun()" onmouseleave="mouseLeaveFun()">Hello</p> -->
+
+        <script>
+
+            // function mouseOverFun(){
+            //     document.getElementsByTagName('p')[0].style.color = 'blue';
+            //     document.getElementsByTagName('p')[0].style.backgroundColor = 'red';
+            // }
+
+            // function mouseLeaveFun(){
+            //     document.getElementsByTagName('p')[0].style.color = 'red';
+            //     document.getElementsByTagName('p')[0].style.backgroundColor = 'blue';
+            // }
+
+        </script>
+
+        <!-- <marquee onmouseover="stop()" onmouseleave="start()">Hello World</marquee> -->
+
+    <!-- ONCHANGE -->
+
+        <!-- <select onchange="ChangeFun()">
+            <option>Tamil</option>
+            <option>English</option>
+            <option>Maths</option>
+        </select> -->
+
+        <script>
+
+            // const ChangeFun = () => {
+            //     alert('Changed')
+            // }
+
+        </script>
+
+        <!-- <input type="text" id="inputBox" onchange="ChangeFun()"> -->
+
+        <script>
+
+            // const ChangeFun = () => {
+            //     var result = document.getElementById('inputBox').value;
+            //     console.log(result);
+            // }
+
+        </script>
+    
+    <!-- ONKEYUP -->
+
+        <!-- <input type="text" id="inputBox1" onkeyup="keyUpFun()"> -->
+
+        <script>
+
+            // const keyUpFun = () => {
+            //     var result = document.getElementById('inputBox1').value;
+            //     console.log(result);
+            // }
+
+        </script>
+
+    <!-- ONKEYPRESS -->
+    
+        <!-- <input type="text" id="inputBox2" onkeypress="keyPressfun()"> -->
+
+        <script>
+
+            // const keyPressfun = () => {
+            //     var result2 = document.getElementById('inputBox2').value;
+            //     console.log(result2);
+            // }
+
+        </script>
+
+    <!-- ONFOCUS -->
+
+        <!-- <input type="text" id="inputBox" onfocus="focusFun()"> -->
+
+        <script>
+
+            // const focusFun = () => {
+            //     document.getElementById('inputBox').style.backgroundColor = 'blue'
+            // }
+
+        </script>
+
+    <!-- ONBLUR -->
+
+        <!-- <input type="text" id="inputBox" onblur="blurFun()"> -->
+
+        <script>
+
+            // const blurFun = () => {
+            //     document.getElementById('inputBox').style.backgroundColor = 'red'
+            // }
+
+        </script>
+
+    <!-- ONFOUS & ONBLUR -->
+
+        <!-- <input type="text" id="inputBox" onfocus="focusFun()" onblur="blurFun()"> -->
+
+        <script>
+
+            // const focusFun = () => {
+            //     document.getElementById('inputBox').style.backgroundColor = 'red'
+            // }
+
+            // const blurFun = () => {
+            //     document.getElementById('inputBox').style.backgroundColor = 'blue'
+            // }
+
+        </script>
+
+        <!-- <input type="text" id="inputBox" onfocus="focusFun(this)" onblur="blurFun(this)"> -->
+        <!-- <input type="text" id="inputBox" onfocus="focusFun(this)" onblur="blurFun(this)"> -->
+        <!-- <input type="text" id="inputBox" onfocus="focusFun(this)" onblur="blurFun(this)"> -->
+
+        <script>
+
+            // const focusFun = (a) => {
+            //     a.style.backgroundColor = 'red'
+            // }
+
+            // const blurFun = (a) => {
+            //     a.style.backgroundColor = 'blue'
+            // }
+
+        </script>
+
+    <!-- WINDOW RESIZE -->
+
+        <script>
+
+            // window.onresize = function() {
+            //     console.log('Resized');
+            // };
+
+        </script>
+
+</body>
+</html>

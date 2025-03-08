@@ -1,24 +1,5 @@
-/* div{
-    height: 200px;
-    width: 200px;
-    background-color: lightcoral;
-    transition-property: transform;
-    transition-duration:1s;
-}
-div:hover{
-    transform: scale(0.2);
-} */
-img{
-    height: 200px;
-    width: 300px;
-    transition-property: transform;
-    transition-duration:1s;
-}
-img:hover{
-    transform: scale(1.5);
-}
-.img-div{
-    height: 200px;
-    width: 300px;
-    overflow: hidden;
+.main-div{
+    display: flex;
+    gap: 10px;
+    margin: 50px;
 }
