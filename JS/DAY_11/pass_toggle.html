@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        #showIcon{
+            position: relative;
+            left: -28px;
+            top: 2px;
+            cursor: pointer;
+        }
+        #hideIcon{
+            position: relative;
+            left: -28px;
+            top: 2px;
+            display: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="fun(event)">
+        <input type="text" id="username" placeholder="Enter Username">
+        <br><br>
+        <input type="password" id="password" placeholder="Enter Password">
+        <i class="fa-solid fa-eye" id="showIcon" onclick="togglePassword()"></i>
+        <i class="fa-solid fa-eye-slash" id="hideIcon" onclick="togglePassword()"></i>        
+        <br><br>
+        <input type="submit">
+    </form>
+    <p id="ptag"></p>
+
+    <script>
+        function fun(event){
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if(username === 'abc' && password === 'Abc@123'){
+                window.location.href = 'javascript.html'
+            }
+            else{
+                document.getElementById('ptag').innerHTML = 'Invalid Username or Password*';
+                document.getElementById('ptag').style.color = 'red'
+            }
+        }
+
+        function togglePassword(){
+            var password = document.getElementById('password');
+
+            if(password.type === 'password'){
+                password.type = 'text';
+                document.getElementById('showIcon').style.display = 'none';
+                document.getElementById('hideIcon').style.display = 'inline';
+            }
+            else{
+                password.type = 'password';
+                document.getElementById('showIcon').style.display = 'inline';
+                document.getElementById('hideIcon').style.display = 'none';
+            }
+        }
+
+    </script>
+</body>
+</html>

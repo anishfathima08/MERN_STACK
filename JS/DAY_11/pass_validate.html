@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <input type="text" id="inputBox" onkeyup="fun()">
+    </form>
+
+    <p id="letter">First Letter Should Be Capital</p>
+    <p id="char">At Least One Special Character</p>
+    <p id="num">Atleast One Number</p>
+    <p id="min">Minimum 10 Characters</p>
+
+    <script>
+
+        function fun(){
+            var password = document.getElementById('inputBox').value;
+
+            var firstLetter = password.charAt(0);
+            if(firstLetter === firstLetter.toUpperCase()){
+                document.getElementById('letter').style.color = 'green';
+            }
+            else{
+                document.getElementById('letter').style.color
+                = 'red';
+            }
+            
+            if(password.length === 0){
+                document.querySelectorAll('p').forEach((a) => {
+                    a.style.color = 'black'
+                })
+            }
+
+            var specialChar = ['@', '#', '$', '!', '&', '*', '%'];
+            if(specialChar.some(a => password.includes(a))){
+                document.getElementById('char').style.color = 'green';
+            }
+            else{
+                document.getElementById('char').style.color = 'red';
+            }
+
+            var Number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+            if(Number.some((a) => password.includes(a))){
+                document.getElementById('num').style.color = 'green';
+            }
+            else{
+                document.getElementById('num').style.color = 'red';
+            }
+
+            if(password.length >=10){
+                document.getElementById('min').style.color = 'green';
+            }
+            else{
+                document.getElementById('min').style.color = 'red'
+            }
+
+        }
+    </script>
+
+</body>
+</html>

@@ -3,46 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product List</title>
+    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
 </head>
 <body>
+    <div class="container">
+        <div class="row" id="ProductList">
+            
+        </div>
 
-    <div class="container mt-4">
-        <h2 class="text-center mb-4">Product List</h2>
-        <div class="row" id="productList"></div>
+        <br><br>
+
+       <h3>Your Cart</h3>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="cartList">
+
+            </tbody>
+        </table>
+
     </div>
 
     <script>
-        const products = [
-            { name: "Laptop", price: 50000, image: "champs1.jpg" },
-            { name: "Phone", price: 20000, image: "champs1.jpg" },
-            { name: "Tablet", price: 15000, image: "champs1.jpg" },
-            { name: "Headphones", price: 5000, image: "champs1.jpg" }
+        var products = [
+            { id: 1, name: "Product 1", price: 100 },
+            { id: 2, name: "Product 2", price: 200 },
+            { id: 3, name: "Product 3", price: 300 },
+            { id: 4, name: "Product 4", price: 400 },
         ];
 
-        let totalPrice = 0;
-        let productHTML = "";
-
-        products.forEach(product => {
-            totalPrice += product.price;
-            productHTML += `
-                <div class="col-md-3">
-                    <div class="card p-3 text-center">
-                        <img src="${product.image}" class="card-img-top" alt="${product.name}">
-                        <div class="card-body">
-                            <h5 class="card-title">${product.name}</h5>
-                            <p class="card-text">Price: ₹${product.price}</p>
+        function display_product(){
+            var display_product = '';
+            products.forEach((a) => {
+                display_product += `
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>${a.name}</h4>
+                                <p>${a.price}</p>
+                                <button>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            `;
-        });
+                `
+            })
+            document.getElementById('ProductList').innerHTML = display_product
+        }
+        display_product()
 
-        document.getElementById("productList").innerHTML = productHTML;
     </script>
-
 </body>
 </html>

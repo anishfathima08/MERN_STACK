@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container my-5">
+        <!-- Search Icon -->
+        <div class="text-end">
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
+                🔍 Search Products
+            </button>
+        </div>
+
+        <div class="row mt-3" id="productList">
+            <!-- Products will be loaded here -->
+        </div>
+
+        <h2 class="mt-5">Cart</h2>
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cartList"></tbody>
+        </table>
+    </div>
+
+    <!-- Modal for Search -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog w-100">
+            <div class="modal-content p-3">
+                <h5 class="modal-title mb-3">Search Products</h5>
+                <input type="text" class="form-control mb-3" id="searchInput" onkeyup="searchProducts()" placeholder="Search for products...">
+                <div id="searchResults"></div>
+                <button class="btn btn-secondary mt-3" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var products = [
+            { id: 1, name: "Product 1", price: 100 },
+            { id: 2, name: "Product 2", price: 200 },
+            { id: 3, name: "Product 3", price: 300 },
+            { id: 4, name: "Product 4", price: 400 },
+        ];
+
+        function renderProducts() {
+            var productList = '';
+            products.forEach(product => {
+                productList += `
+                    <div class="col-md-3 mb-3">
+                        <div class="card p-3 shadow">
+                            <h5>${product.name}</h5>
+                            <p>Price: ₹${product.price}</p>
+                            <button class="btn btn-primary" onclick="addToCart(${product.id})">Add to Cart</button>
+                        </div>
+                    </div>
+                `;
+            });
+            document.getElementById('productList').innerHTML = productList;
+        }
+        renderProducts();
+
+        var cart = [];
+
+        function addToCart(productId) {
+            var product = products.find(p => p.id === productId);
+            var existingItem = cart.find(p => p.id === productId);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                product.quantity = 1;
+                cart.push(product);
+            }
+            renderCart();
+        }
+
+        function removeFromCart(productId) {
+            var item = cart.find(item => item.id === productId);
+            if (item) {
+                item.quantity > 1 ? item.quantity-- : cart.splice(cart.indexOf(item), 1);
+            }
+            renderCart();
+        }
+
+        function renderCart() {
+            var cartList = '';
+            cart.forEach(item => {
+                cartList += `
+                    <tr>
+                        <td>${item.name}</td>
+                        <td>₹${item.price}</td>
+                        <td>${item.quantity}</td>
+                        <td>₹${item.price * item.quantity}</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm" onclick="removeFromCart(${item.id})">Remove</button>
+                        </td>
+                    </tr>
+                `;
+            });
+            document.getElementById('cartList').innerHTML = cartList;
+        }
+
+        // Search Functionality
+        function searchProducts() {
+            const searchValue = document.getElementById('searchInput').value.toLowerCase();
+            const searchResults = products.filter(product => product.name.toLowerCase().includes(searchValue))
+                .map(product => `
+                    <div class="border p-2 mb-2">
+                        <h6>${product.name}</h6>
+                        <p>Price: ₹${product.price}</p>
+                        <button class="btn btn-primary btn-sm" onclick="addToCart(${product.id})">Add to Cart</button>
+                    </div>
+                `)
+                .join('');
+
+            document.getElementById('searchResults').innerHTML = searchResults || `<p>No products found</p>`;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
